@@ -17,7 +17,7 @@
             echo '<tr>';
             echo '<td>'.$usuario['nome'].'</td>';
             echo '<td>'.$usuario['email'].'</td>';
-            echo '<td> </td>';
+            echo '<td><a href="">Editar</a> - <a href="">Excluir</a></td>';
             echo '</tr>';
 
         }
