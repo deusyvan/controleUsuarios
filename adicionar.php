@@ -1,10 +1,12 @@
 <?php 
+require 'config.php';
+
 if (isset($_POST['nome']) && empty($_POST['nome'])==FALSE){
     $nome = addslashes($_POST['nome']);
     $email = addslashes($_POST['email']);
-    $senha = addslashes($_POST['senha']);
+    $senha = md5(addslashes($_POST['senha']));
     
-    
+    $sql = "INSERT INTO usuarios SET nome = '$nome', email = '$email', senha = '$senha'";
 }
 ?>
 
