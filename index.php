@@ -1,7 +1,7 @@
 <?php 
     require 'config.php';
 ?>
-
+<a href="adicionar.php">Adicionar Novo usuário</a>
 <table border="0" width="100%">
   <tr>
     <th>Nome</th>
