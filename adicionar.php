@@ -7,6 +7,8 @@ if (isset($_POST['nome']) && empty($_POST['nome'])==FALSE){
     $senha = md5(addslashes($_POST['senha']));
     
     $sql = "INSERT INTO usuarios SET nome = '$nome', email = '$email', senha = '$senha'";
+    
+    $pdo->query($sql);
 }
 ?>
 
