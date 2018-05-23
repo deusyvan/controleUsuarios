@@ -27,9 +27,6 @@
 	E-mail: <br/>
 	<input type="text" name="email" value="<?php echo $dado['email']?> "/><br/><br/>
 	
-	Senha: <br/>
-	<input type="password" name="senha"/><br/><br/>
-	
 	<input type="submit" value="Atualizar"/>
  	
  </form>
