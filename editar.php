@@ -6,7 +6,11 @@
  if(isset($_GET['id']) && empty($_GET['id']) == FALSE){
      
      $id = addslashes($_GET['id']);
-     
+     $sql = "SELECT * FROM usuarios WHERE id = '$id'";
+     $sql = $pdo->query($sql);
+     if($sql->rowCount() > 0){
+         $dado = $sql->fetch();
+     }
      
  } else {
      header("Location: index.php");
