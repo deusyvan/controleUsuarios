@@ -10,6 +10,8 @@
      $sql = $pdo->query($sql);
      if($sql->rowCount() > 0){
          $dado = $sql->fetch();
+     } else {
+         header("Location: index.php");
      }
      
  } else {
