@@ -20,13 +20,13 @@
  
  <form method="POST">
  	Nome: <br/>
-	<input type="text" name="nome" value=""/><br/><br/>
+	<input type="text" name="nome" value="<?php echo $dado['nome']?>" /><br/><br/>
 	
 	E-mail: <br/>
-	<input type="text" name="email" value=""/><br/><br/>
+	<input type="text" name="email" value="<?php echo $dado['email']?> "/><br/><br/>
 	
 	Senha: <br/>
-	<input type="password" name="senha" value=""/><br/><br/>
+	<input type="password" name="senha"/><br/><br/>
 	
 	<input type="submit" value="Atualizar"/>
  	
