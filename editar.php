@@ -6,6 +6,20 @@
  if(isset($_GET['id']) && empty($_GET['id']) == FALSE){
      
      $id = addslashes($_GET['id']);
+ }
+ 
+ 
+ if(isset($_POST['nome']) && empty($_POST['nome']) == FALSE){
+     $nome = addslashes($_POST['nome']);
+     $email = addslashes($_POST['email']);
+     
+     $sql = "UPDATE usuarios SET nome = '$nome', email = '$email' WHERE id = '$id'";
+     $pdo->query($sql);
+     
+     header("Location: index.php");
+     
+ }
+ 
      $sql = "SELECT * FROM usuarios WHERE id = '$id'";
      $sql = $pdo->query($sql);
      if($sql->rowCount() > 0){
@@ -13,10 +27,6 @@
      } else {
          header("Location: index.php");
      }
-     
- } else {
-     header("Location: index.php");
- }
  
  ?>
  
